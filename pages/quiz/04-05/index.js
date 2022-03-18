@@ -53,6 +53,7 @@ export default function GraphqlMutationProduct() {
 
   const onChangePrice = (event) => {
     setPrice(Number(event.target.value))
+    // Number는 숫자만 인식하므로 ParseInt(Int형으로 강제형변환)을 쓸 수도 있음
   }
 
 
@@ -65,7 +66,7 @@ export default function GraphqlMutationProduct() {
       <br />
       상품내용: <input type="text" onChange={onChangeContents}/>
       <br />
-      상품가격: <input type="text" onChange={onChangePrice}/>
+      상품가격: <input type="number" onChange={onChangePrice}/>
       <br />
       <button onClick={onClickSubmit}>상품 등록하기</button>
     </>
