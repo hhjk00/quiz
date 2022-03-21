@@ -40,6 +40,7 @@ export default function GraphqlMutationPage() {
       alert("게시글 등록에 성공했어요");
       alert("상세 페이지로 이동해 볼까요?");
       router.push(
+      //  ↓주소 틀렸었음
         `/quiz/05-02/${result.data.createProduct._id}`
       );
       //             ↑ 템플릿 리터럴
