@@ -17,7 +17,6 @@ export default function BoardsProduct(props) {
 
 
   const onClickEdit = async() => { //수정
-    console.log(name, detail, price)
     await updateProduct({
         variables : { productId: (router.query.myproductId), updateProductInput: {
           name: name, detail: detail, price: price

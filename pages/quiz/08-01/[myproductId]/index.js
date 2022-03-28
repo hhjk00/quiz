@@ -19,6 +19,7 @@ export default function BoardsDetailPage() {
   const { data } = useQuery(FETCH_PRODUCT, { 
     variables: { productId: String(router.query.myproductId) }
   })
+  console.log(data)
 
   const onClickMove = () => {
       router.push(`/quiz/08-01/${router.query.myproductId}/edit`)
@@ -27,9 +28,9 @@ export default function BoardsDetailPage() {
 
   return(
     <div>
-    <div>판매자: {data? data.fetchProduct.seller : "loading..." }</div>
-    <div>상품명: {data? data.fetchProduct.name : "loading..." }</div>
-    <div>상품내용: {data? data.fetchProduct.detail : "loading..." }</div>
+    <div>판매자: {data?.fetchProduct.seller}</div>
+    <div>상품명: {data?.fetchProduct?.name }</div>
+    <div>상품내용: {data && data.fetchProduct?.detail }</div>
     <div>상품가격: {data? data.fetchProduct.price : "loading..." }</div>
     <button onClick={onClickMove}>수정하기</button>
 
