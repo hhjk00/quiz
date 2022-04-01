@@ -15,7 +15,7 @@ const Body = styled.div`
 `;
 
 const LayoutSidebar = styled.div`
-  width: 300px;
+  width: 350px;
   height: 500px;
   background-color: orange;
 `;

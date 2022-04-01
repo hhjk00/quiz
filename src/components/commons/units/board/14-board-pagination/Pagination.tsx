@@ -17,7 +17,7 @@ export default function Pagination(props) {
   const onClickNextPage = (event) => {
     if (!(startPage + 10 <= props.lastPage)) return;
     setStartPage((prev) => prev + 10);
-    props.refetch({ page: startPage + 10 }); // variables 객체 , page는 숫자이므로 Number로 감싸줌
+    props.refetch({ page: startPage + 10 }); 
     setCurrent(event.target.id)
 
   };
@@ -25,7 +25,7 @@ export default function Pagination(props) {
   const onClickPrevPage = (event) => {
     if (startPage === 1) return
     setStartPage((prev) => prev - 10);
-    props.refetch({ page: startPage - 10 }); // variables 객체 , page는 숫자이므로 Number로 감싸줌
+    props.refetch({ page: startPage - 10 }); 
     setCurrent(event.target.id)
 
   };
