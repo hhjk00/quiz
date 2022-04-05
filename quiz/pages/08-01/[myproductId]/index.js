@@ -22,7 +22,7 @@ export default function BoardsDetailPage() {
   console.log(data)
 
   const onClickMove = () => {
-      router.push(`/quiz/08-01/${router.query.myproductId}/edit`)
+      router.push(`/08-01/${router.query.myproductId}/edit`)
   }
 
 

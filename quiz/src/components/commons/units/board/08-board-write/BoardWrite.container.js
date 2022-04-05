@@ -23,7 +23,7 @@ export default function BoardsProduct(props) {
         }} //어떤 게시글을 수정할것인가
     })
     alert("게시글 수정에 성공하였습니다!")
-    router.push(`/quiz/08-01/${router.query.myproductId}`)
+    router.push(`/08-01/${router.query.myproductId}`)
  
     }
 
@@ -38,7 +38,7 @@ export default function BoardsProduct(props) {
       }); 
       alert("게시글 등록에 성공했어요");
       router.push(
-        `/quiz/08-01/${result.data.createProduct._id}`
+        `/08-01/${result.data.createProduct._id}`
       );
     } catch (error) {
       alert(error.message);

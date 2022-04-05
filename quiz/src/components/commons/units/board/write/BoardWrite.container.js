@@ -27,7 +27,7 @@ export default function BoardWrite() {
       alert("게시글 등록에 성공했어요!");
       alert("상세 페이지로 이동해 볼까요?");
       router.push(
-        `/quiz/06-02/${result.data.createBoard.number}`
+        `/06-02/${result.data.createBoard.number}`
       );
     } catch (error) {
       alert(error.message);

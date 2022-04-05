@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "ts-node-dev index.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "pg": "^8.7.3",
+    "ts-node-dev": "^1.1.8",
+    "typeorm": "^0.3.4"
+  }
+}
