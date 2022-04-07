@@ -1,4 +1,4 @@
-import { DataSource } from "typeorm";
+import { DataSource, IsNull } from "typeorm";
 import { Product } from "./Product.postgres";
 import { ApolloServer, gql } from "apollo-server";
 
@@ -42,12 +42,12 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     fetchProduct: async (_:any, args:any ) => {
-      const result = await Product.findOne({where:{_id :args.productId}})
+      const result = await Product.findOne({where:{_id :args.productId , deletedAt: IsNull()}})
       return result
     },
 
     fetchProducts: async () => {
-      const result = await Product.find( );
+      const result = await Product.find( {where:{deletedAt: IsNull()}} );
 
       return result;
     },
