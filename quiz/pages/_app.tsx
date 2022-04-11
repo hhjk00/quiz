@@ -3,9 +3,10 @@ import "antd/dist/antd.css";
 import { ApolloClient, ApolloLink, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { AppProps } from "next/app";
 import Layout from "../src/components/commons/layout";
-import { Global } from "@emotion/react";
+import { Global } from "@emotion/react"
 import { globalStyles } from "../src/commons/styles/globalStyles";
 import { createUploadLink } from "apollo-upload-client"
+import {  RecoilRoot } from "recoil"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const uploadLink = createUploadLink({
@@ -19,10 +20,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ApolloProvider client={client}>
+      <RecoilRoot>
       <Global styles={globalStyles} />
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      </RecoilRoot>
     </ApolloProvider>
   )
 }
