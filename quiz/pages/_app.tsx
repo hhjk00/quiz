@@ -7,6 +7,7 @@ import { Global } from "@emotion/react"
 import { globalStyles } from "../src/commons/styles/globalStyles";
 import { createUploadLink } from "apollo-upload-client"
 import {  RecoilRoot } from "recoil"
+import ApolloSetting from "../src/components/commons/apollo";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const uploadLink = createUploadLink({
@@ -19,15 +20,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
   return (
-    <ApolloProvider client={client}>
-      <RecoilRoot>
-      <Global styles={globalStyles} />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      </RecoilRoot>
-    </ApolloProvider>
-  )
+    <RecoilRoot>
+      <ApolloSetting>
+        <Global styles={globalStyles} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ApolloSetting>
+    </RecoilRoot>
+  );
+  
 }
 
 export default MyApp
