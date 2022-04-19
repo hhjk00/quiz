@@ -128,8 +128,8 @@ export default function ApolloCacheStatePage() {
         작성자: <Input01 type="text" register={register("writer")} />
         비밀번호 : <Input01 type="password" register={register("password")} />
         <br />
-        제목: <Input01 type="text" register={register("title")} /> 내용:{" "}
-        <Input01 type="text" register={register("contents")} />{" "}
+        제목: <Input01 type="text" register={register("title")} />
+        내용: <Input01 type="text" register={register("contents")} />
         <Button01 title="등록" />
       </form>
     </>
