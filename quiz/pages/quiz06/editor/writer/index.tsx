@@ -51,7 +51,7 @@ export default function WebEditorPage() {
           },
         },
       });
-      router.push(`quiz06/editor/detail/${result.data.createBoard._id}`);
+      router.push(`/quiz06/editor/detail/${result.data.createBoard._id}`);
     } catch (error) {
       Modal.error({ content: error.message });
     }
