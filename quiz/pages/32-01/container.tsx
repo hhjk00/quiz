@@ -6,8 +6,13 @@ export default function MemoizationContainerPage() {
   let countLet = 0;
   const [countState, setCountState] = useState(0);
 
-  const aaa = useMemo(() => countLet, []);
-  console.log(aaa);
+  // function onClickCountLet() {
+  //   console.log(countLet + 1);
+  //   return countLet + 1;
+  // }
+
+  // const aaa = useMemo(() => onClickCountLet(), []);
+  // console.log(aaa);
 
   const onClickCountLet = useCallback(() => {
     // countLet = countLet + 1;
